@@ -84,6 +84,60 @@ experiences.forEach(section => {
   expContainer.appendChild(sectionEl);
 });
 
+const projects = [
+  {
+    title: "Machine Learning Project",
+    subtitle: "University second year project involving the creation of a neural network to classify flowers based off the Flowers-102 dataset\n\nManage to achieve an accurage of 64.5%. The GitHub repo below contains information on how the reproduce the model, and the 64.5% model itself.",
+    github: "https://github.com/rk1274/IMLO-assessment",
+  },
+  {
+    title: "Bridges Puzzle Solver",
+    subtitle: "The above video shows the solver in action, solving a complex version of the logic puzzle game 'Bridges' (Hashi).",
+    video: "./assets/bridges.mp4",
+    github: "https://github.com/rk1274/bridges-solver-core"
+  },
+ {
+    title: "Project Three",
+    img: "./assets/project-3.png",
+    github: "https://github.com/",
+    liveDemo: "https://github.com/"
+  }
+];
+
+const projectsContainer = document.querySelector("#projects .about-containers");
+
+projects.forEach(project => {
+  const projectEl = document.createElement("div");
+  projectEl.classList.add("details-container", "color-container");
+
+  const videoEmbed = project.video
+  ? `<div class="video-container">
+       <video autoplay loop muted playsinline class="project-video">
+         <source src="${project.video}" type="video/mp4">
+         Your browser does not support the video tag.
+       </video>
+     </div>`
+  : "";
+
+  const img = project.img
+  ? `<img src="${project.img}" alt="${project.title}" class="project-img" />`
+  : "";
+
+  projectEl.innerHTML = `
+    <div class="article-container">
+        ${img}
+        ${videoEmbed}
+    </div>
+    <h2 class="skills-sub-title project-title">${project.title}</h2>
+    <h3 class="skills-sub-title project-subtitle">${project.subtitle}</h3>
+    <div class="btn-container">
+      <button class="btn btn-color-2 project-btn" onclick="location.href='${project.github}'">Github</button>
+    </div>
+  `;
+
+  projectsContainer.appendChild(projectEl);
+});
+
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
