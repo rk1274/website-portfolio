@@ -82,9 +82,13 @@ nav,
 }
 
 nav {
+   position: sticky;
+  top: 0;
+  z-index: 1000; /* keeps it above content */
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 12vh;
+  padding: 0 2rem;
 }
 
 .nav-links {
@@ -219,8 +223,8 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
   width: 400px;
+  aspect-ratio: 1 / 1;
   margin: auto 0;
 }
 
@@ -448,13 +452,13 @@ article .icon {
 
 .project-subtitle {
   margin: 1rem;
-  color: rgb(100, 100, 100);
+  color: var(--text-secondary);
   font-size: 1.2rem;
   font-weight: 300;
 }
 
 .project-btn {
-  color: black;
+  color: var(--text-primary);
   border-color: rgb(163, 163, 163);
 }
 
