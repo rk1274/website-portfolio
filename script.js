@@ -96,12 +96,6 @@ const projects = [
     video: "./assets/bridges.mp4",
     github: "https://github.com/rk1274/bridges-solver-core"
   },
- {
-    title: "Project Three",
-    img: "./assets/project-3.png",
-    github: "https://github.com/",
-    liveDemo: "https://github.com/"
-  }
 ];
 
 const projectsContainer = document.querySelector("#projects .about-containers");
