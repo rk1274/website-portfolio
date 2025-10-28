@@ -96,6 +96,13 @@ const projects = [
     video: "./assets/bridges.mp4",
     github: "https://github.com/rk1274/bridges-solver-core"
   },
+  {
+    title: "PickEms' Web App With Database Integration",
+    subtitle: "A web app for my friends to make predictions on who would win our badminton tournament. A simple database integration allows users to view each other's predictions.",
+    img: "./assets/pickems-img.png",
+    github: "https://github.com/rk1274/badminton-pickems",
+    link: "https://badminton-pickems.netlify.app/"
+  },
 ];
 
 const projectsContainer = document.querySelector("#projects .about-containers");
@@ -117,6 +124,11 @@ projects.forEach(project => {
   ? `<img src="${project.img}" alt="${project.title}" class="project-img" />`
   : "";
 
+  const link = project.link
+    ? `<button class="btn btn-color-1 project-btn" onclick="location.href='${project.link}'">Live Demo</button>`
+    : "";
+
+
   projectEl.innerHTML = `
     <div class="article-container">
         ${img}
@@ -126,6 +138,7 @@ projects.forEach(project => {
     <h3 class="skills-sub-title project-subtitle">${project.subtitle}</h3>
     <div class="btn-container">
       <button class="btn btn-color-2 project-btn" onclick="location.href='${project.github}'">Github</button>
+      ${link}
     </div>
   `;
 
