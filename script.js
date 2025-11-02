@@ -124,8 +124,21 @@ projects.forEach(project => {
   ? `<img src="${project.img}" alt="${project.title}" class="project-img" />`
   : "";
 
-  const link = project.link
-    ? `<button class="btn btn-color-1 project-btn" onclick="location.href='${project.link}'">Live Demo</button>`
+  const githubLink = `
+    <a href="${project.github}" 
+       class="btn btn-color-2 project-btn" 
+       target="_blank" 
+       rel="noopener noreferrer">
+       GitHub
+    </a>`;
+
+  const liveDemoLink = project.link
+    ? `<a href="${project.link}" 
+         class="btn btn-color-1 project-btn" 
+         target="_blank" 
+         rel="noopener noreferrer">
+         Live Demo
+       </a>`
     : "";
 
 
@@ -137,8 +150,8 @@ projects.forEach(project => {
     <h2 class="skills-sub-title project-title">${project.title}</h2>
     <h3 class="skills-sub-title project-subtitle">${project.subtitle}</h3>
     <div class="btn-container">
-      <button class="btn btn-color-2 project-btn" onclick="location.href='${project.github}'">Github</button>
-      ${link}
+      ${githubLink}
+      ${liveDemoLink}
     </div>
   `;
 
