@@ -89,6 +89,13 @@ nav {
   align-items: center;
   height: 12vh;
   padding: 0 2rem;
+  background: rgba(1, 1, 1, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.nav-bottom {
+  background: none;
+  backdrop-filter: none;
 }
 
 .nav-links {
@@ -122,6 +129,9 @@ a:hover {
 
 #hamburger-nav {
   display: none;
+  background: rgba(1, 1, 1, 0.2);
+  backdrop-filter: blur(10px);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
 }
 
 .hamburger-menu {
@@ -154,6 +164,8 @@ a:hover {
   overflow: hidden;
   transition: all 0.3 ease-in-out;
   margin-top: 10px;
+  background: rgba(1, 1, 1, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .menu-links a {
