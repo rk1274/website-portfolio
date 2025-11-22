@@ -86,15 +86,15 @@ experiences.forEach(section => {
 
 const projects = [
   {
-    title: "Machine Learning Project",
-    subtitle: "University second year project involving the creation of a neural network to classify flowers based off the Flowers-102 dataset\n\nManage to achieve an accurage of 64.5%. The GitHub repo below contains information on how the reproduce the model, and the 64.5% model itself.",
-    github: "https://github.com/rk1274/IMLO-assessment",
-  },
-  {
     title: "Bridges Puzzle Solver",
     subtitle: "The above video shows the solver in action, solving a complex version of the logic puzzle game 'Bridges' (Hashi).",
     video: "./assets/bridges.mp4",
     github: "https://github.com/rk1274/bridges-solver-core"
+  },
+  {
+    title: "Machine Learning Project",
+    subtitle: "University second year project involving the creation of a neural network to classify flowers based off the Flowers-102 dataset\n\nManage to achieve an accurage of 64.5%. The GitHub repo below contains information on how the reproduce the model, and the 64.5% model itself.",
+    github: "https://github.com/rk1274/IMLO-assessment",
   },
   {
     title: "PickEms' Web App With Database Integration",
@@ -102,6 +102,12 @@ const projects = [
     img: "./assets/pickems-img.png",
     github: "https://github.com/rk1274/badminton-pickems",
     link: "https://badminton-pickems.netlify.app/"
+  },
+  {
+    title: "Minesweeper Player (Python GUI & CLI)",
+    subtitle: "The core functionality of Minesweeper implemented in Python, with both a text-based and GUI-based player.",
+    video: "./assets/minesweeper.mp4",
+    github: "https://github.com/rk1274/minesweeper-player",
   },
 ];
 
